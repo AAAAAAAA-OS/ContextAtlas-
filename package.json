@@ -1,0 +1,13 @@
+{
+  "name": "contextatlas", "version": "1.0.0", "private": true,
+  "description": "Local API-driven contextual exploration for theory development",
+  "type": "module", "engines": {"node": ">=22.13.0"},
+  "scripts": {
+    "run": "node src/cli.mjs run", "resume": "node src/cli.mjs resume",
+    "extract": "node src/cli.mjs extract", "demo": "node src/cli.mjs demo",
+    "export-prompts": "node scripts/export-prompts.mjs", "build": "node scripts/build.mjs",
+    "test": "node --test tests/api.test.mjs tests/workflow.test.mjs"
+  },
+  "dependencies": {"zod": "3.25.76"},
+  "devDependencies": {"typescript": "5.9.3"}
+}

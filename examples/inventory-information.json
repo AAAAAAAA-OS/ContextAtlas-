@@ -1,0 +1,10 @@
+{
+  "title": "Inventory information and replenishment choice",
+  "x": "Availability of a verified inventory signal",
+  "y": "Selection of an immediate replenishment order",
+  "unit": "A store manager deciding whether to replenish stock",
+  "context": "A store manager can place a standard replenishment order now or defer the order until the next scheduled review. In X0 the manager sees only the most recent periodic stock estimate; in X1 the manager also sees a verified current inventory signal. Both actions remain operationally feasible. Explore demand volatility, lead times, and information conditions without changing the focal information contrast.",
+  "rounds": 5,
+  "contextsPerRound": 2,
+  "perCondition": 12
+}

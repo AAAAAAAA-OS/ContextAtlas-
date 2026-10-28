@@ -1,0 +1,28 @@
+{
+  "headline": "A shared history gains meaning from the choice set",
+  "introduction": "Prior collaboration looks powerful when it is the only distinguishing credential. Once the alternative has its own successful history, the research question changes: does experience create an advantage, remove a disadvantage, or simply qualify a firm for consideration? The scoring-sheet contexts add another question: which kinds of experience can enter the decision in the first place?",
+  "researchQuestion": "When does prior collaboration become a comparative advantage, and when is it usable evidence in partner selection?",
+  "implications": [
+    {
+      "title": "Include the competing partners' histories",
+      "observation": "With one successful project for the alternative, adding a successful focal project moved all ten responses from choosing the alternative to equivalence. Focal selection stayed at zero in both conditions.",
+      "interpretation": "A repeat tie may function as a comparative credential. Its presence can remove a disadvantage without creating a positive preference. A theory of partner choice therefore needs the histories of the available alternatives, alongside the history of the focal relationship.",
+      "researchMove": "Give procurement participants matched current proposals and vary the alternative's record across zero, one, and three successful projects, alongside the focal firm's zero-or-one contrast. Record the full choice distribution, including equivalence, to distinguish gaining consideration from winning the contract.",
+      "contextIds": [
+        "baseline",
+        "r2-c1",
+        "r5-c2"
+      ]
+    },
+    {
+      "title": "Locate the organizational channel through which history matters",
+      "observation": "Audited public-grant procurement retained the baseline's 100-point contrast. A scoring sheet without a prior-collaboration field instead produced equivalence in every decision, at both X levels.",
+      "interpretation": "Formal evaluation may filter which relational evidence enters a decision. The scoring-sheet contrast points to a more precise boundary than formalization alone: whether the organization makes prior experience visible and usable in comparing proposals. This is a mechanism to distinguish from the effects of external scrutiny.",
+      "researchMove": "Cross audit requirements with the inclusion of a prior-experience field on an otherwise identical scoring form. Hold candidate records and current terms fixed, and collect criterion weights and written selection reasons to examine whether the form changes the use of relational evidence.",
+      "contextIds": [
+        "r1-c1",
+        "r3-c3"
+      ]
+    }
+  ]
+}

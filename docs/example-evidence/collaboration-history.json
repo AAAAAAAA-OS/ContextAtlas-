@@ -1,0 +1,1052 @@
+{
+  "provenance": {
+    "kind": "offline-model-run",
+    "model": "deepseek-flash",
+    "reasoningEffort": "high",
+    "thinkingEnabled": true,
+    "stream": false,
+    "engineSha256": "85c6cef84e21f6f7109eab8b980af00162e1cade15a1a36ed4a599c62686b492",
+    "startedAt": "2026-10-26T05:57:54.711Z",
+    "source": "Author-defined research brief; not a replication of a published paper.",
+    "method": "Prepared offline with the ContextAtlas engine and a separate Python OpenAI adapter. Each actor request receives only its decision facts and randomized option labels/order. Five rounds select two new standalone contexts each after reviewing earlier results; a separate baseline is included. Each X condition has 10 model decisions, organized as five mirrored-order pairs. These are model-generated illustrations, not independent human observations or validated theory boundaries. An early offline transport issue altered typographic punctuation in some planning/reflection inputs. Decision-agent inputs were verified unchanged. Subsequent bridge requests used strict UTF-8 with message-digest verification.",
+    "settings": {
+      "rounds": 5,
+      "contextsPerRound": 2,
+      "decisionsPerCondition": 10,
+      "baselineIncluded": true,
+      "plannedDecisions": 220
+    },
+    "adapter": {
+      "client": "Python openai",
+      "requestTimeoutSeconds": 180,
+      "maxTransportRetries": 2,
+      "initialPoolConcurrency": 12,
+      "recoveryPools": [
+        {
+          "study": "algorithm-explanations",
+          "initialConcurrency": 4,
+          "correctedTransportConcurrency": 8,
+          "actorTimeoutSeconds": 180,
+          "nonactorTimeoutSeconds": 600,
+          "initialRecoveryNonactorTimeoutSeconds": 180
+        },
+        {
+          "study": "knowledge-sharing-incentives",
+          "initialConcurrency": 4,
+          "correctedTransportConcurrency": 8,
+          "actorTimeoutSeconds": 180,
+          "nonactorTimeoutSeconds": 600
+        },
+        {
+          "study": "decision-autonomy",
+          "concurrency": 1,
+          "nonactorOnly": true,
+          "nonactorTimeoutSeconds": 600
+        }
+      ],
+      "combinedConcurrencyLimit": 20,
+      "concurrencyNote": "The five studies began in one pool of 12. Two recovery pools of 4 raised the combined limit to 20. Autonomy used one non-actor slot after the original pool drained to one operation, bounding that phase at 10. After legacy processes stopped, two corrected UTF-8 pools of 8 bounded the final phase at 16. Later non-actor operations used 600 seconds. Normal actors retained 180 seconds; the disclosed empty-output recovery used 600 seconds."
+    },
+    "caveat": "Offline preparation is not an end-to-end execution or performance test of the published website.",
+    "generatedAt": "2026-10-26T06:39:34.289Z",
+    "acceptedDecisions": 220,
+    "modelRequests": 238,
+    "totalTokens": 495751,
+    "acceptedDecisionRecordSha256": "301a82dcb16fde6c66837ab9d6c44c0b7b23af3e46cc86f334f5b3749d4d4d94",
+    "callAuditSha256": "7885e867ea4ebd88961afc394f2479cea9e9af345c206deef6e528f00da58ec6",
+    "roundOriginSummaries": {
+      "count": 5,
+      "method": "Concise editorial summaries describe the approved prospective planning rationale. The full original rationale remains available separately and unchanged."
+    },
+    "interpretationNotes": [
+      "The response is a stated partner choice. It does not measure contract formation, realized cooperation, or project performance.",
+      "The reference vignette describes both firms as qualified and feasible without supplying detailed comparative evaluations. Prior history may therefore change the amount of usable evidence as well as familiarity."
+    ],
+    "providerModels": [
+      "deepseek-flash"
+    ],
+    "usageNote": "Token usage sums provider-reported usage on recorded responses, including unusable final outputs. Usage for failed or unreturned transport attempts is unknown.",
+    "requestAccounting": {
+      "recordedRequestEnvelopes": 238,
+      "providerAttempts": 247,
+      "providerAttemptsByRole": {
+        "design": 1,
+        "actor": 221,
+        "plan": 12,
+        "review": 6,
+        "reflect": 5,
+        "report": 2
+      },
+      "codexPlannerOperations": 0,
+      "interruptedNonactorAttempts": 0,
+      "explicitNonActorDiagnosticRetries": 0,
+      "note": "Recorded request envelopes count model operations, including explicit recoveries and any disclosed Codex planning. Provider attempts count returned API responses and documented failures, including bounded retries; Codex operations are separate. Interrupted non-actor operations may include additional sent attempts with unknown cost. Accepted actor decisions are counted separately."
+    },
+    "editorialClarifications": {
+      "count": 1,
+      "changes": [
+        {
+          "id": "collaboration-neutral-category-reading",
+          "type": "wording-clarification",
+          "reason": "The engine retains equivalent and insufficient-information responses as separate categories. Clarify the limitation of the aggregate focal-selection rate without implying that the recorded categories were conflated. No numerical values or decision records changed.",
+          "rawReportRetained": "The original model report remains unchanged in the local study.json and calls.jsonl audit."
+        }
+      ]
+    },
+    "transportAudit": {
+      "changedLegacyActorInputs": 0,
+      "affectedLegacyNonactorRequests": 1,
+      "affectedNonactorRequestsWithReturnedContent": 1,
+      "originalNonAsciiCharacters": [
+        "’"
+      ],
+      "method": "Legacy boundary reconstructed from canonical requests and the observed GBK/surrogateescape configuration; direct Python and corrected UTF-8 requests excluded. This is not a network packet capture.",
+      "fix": "Strict UTF-8 stdin/stdout and matching Node/Python message SHA-256 checks for subsequent bridge requests."
+    }
+  },
+  "study": {
+    "id": "illustrative-collaboration-history",
+    "title": "Prior collaboration history and partner selection",
+    "createdAt": "2026-10-26T05:57:54.711Z",
+    "updatedAt": "2026-10-26T06:39:34.287Z",
+    "input": {
+      "title": "Prior collaboration and partner selection",
+      "x": "A documented history of successful collaboration with the focal candidate firm: no prior joint project versus one successfully completed joint project",
+      "y": "Stated preference for selecting the focal candidate firm for a new joint project",
+      "unit": "A procurement manager making one firm-level project-partner selection decision",
+      "context": "A manufacturing company is selecting between two technically qualified firms for a joint process-improvement project. The focal firm and the alternative firm both offer feasible contracts within the available budget. The prior joint project, when present, was completed on time and met its agreed requirements. The focal candidate remains the same firm across the two X conditions. Build a complete reference setting for this decision with comparable current information, and distinguish a stated partner choice from realized cooperation or project performance. This is an author-specified illustrative research question with no supplied paper; any numerical facts in the vignette are explicit modeling assumptions. Keep both partner options feasible and allow a neutral response if the available evidence does not support a preference.",
+      "rounds": 5,
+      "contextsPerRound": 2,
+      "perCondition": 10
+    },
+    "stage": "completed",
+    "round": 5,
+    "status": "completed",
+    "contexts": [
+      {
+        "id": "baseline",
+        "round": 0,
+        "title": "Baseline partner-selection setting",
+        "summary": "Reference setting before contextual exploration.",
+        "facts": [
+          "The manufacturing company plans one joint process-improvement project with an external firm.",
+          "The focal candidate firm and the alternative candidate firm are both technically qualified.",
+          "Both proposed contracts are feasible within the approved budget.",
+          "The project scope and completion date are identical under either proposal.",
+          "The procurement manager reviews current technical and commercial information for both proposals."
+        ],
+        "attributes": [],
+        "inspiration": {
+          "type": "mechanism",
+          "text": "Reference configuration derived from the author-defined research question and explicit modeling assumptions.",
+          "sourceIds": []
+        },
+        "expectedEffect": "uncertain",
+        "prediction": "Baseline response contrast is measured before selecting exploratory contexts.",
+        "learningValue": "Establish the within-context response contrast under the starting conditions.",
+        "status": "completed",
+        "result": {
+          "counts0": {
+            "positive": 0,
+            "negative": 0,
+            "equivalent": 10,
+            "insufficient": 0
+          },
+          "counts1": {
+            "positive": 10,
+            "negative": 0,
+            "equivalent": 0,
+            "insufficient": 0
+          },
+          "n0": 10,
+          "n1": 10,
+          "rate0": 0,
+          "rate1": 1,
+          "effect": 1,
+          "mirrorAgreement": 1,
+          "mirrorPairs": 10,
+          "interpretation": "Positive-option selections: X0 0/10 (0.0%); X1 10/10 (100.0%). The descriptive X1 minus X0 contrast is +100.0 percentage points. Equivalent and insufficient-information responses stay in the denominators. Mirror agreement is 10/10 complete pairs (100.0%). Boundary diagnostic: X0 near the floor; X1 near the ceiling (5%/95% thresholds). These are descriptive model-generated choices, not human observations or causal estimates.",
+          "saturated": true
+        }
+      },
+      {
+        "id": "r1-c1",
+        "title": "Audited public-grant procurement",
+        "summary": "A standalone context in which the same partner choice is made for a project funded by a public grant, with a published scoring rubric and an externally audited selection record. Both candidate firms remain qualified, feasible, and comparable under the shared task.",
+        "facts": [
+          "The joint process-improvement project is funded through a public grant that requires a documented vendor-selection record.",
+          "A published scoring rubric lists technical, schedule, and commercial criteria for both candidate proposals.",
+          "An external grant auditor will review the selection file after the choice is recorded.",
+          "Both candidate firms appear on the grant program's approved vendor list.",
+          "The grant program's selection template contains a written-justification field for the recorded choice."
+        ],
+        "attributes": [
+          {
+            "name": "Funding source",
+            "level": "Public grant with external post-decision audit"
+          },
+          {
+            "name": "Evaluation documentation",
+            "level": "Published scoring rubric applied to both proposals"
+          },
+          {
+            "name": "Decision record",
+            "level": "Template with written-justification field"
+          }
+        ],
+        "inspiration": {
+          "type": "previous_result",
+          "text": "The baseline context was descriptively saturated, with X0 at the floor and X1 at the ceiling. This context tests whether a formal, auditable selection environment changes the contrast while keeping both options feasible.",
+          "sourceIds": [
+            "baseline"
+          ]
+        },
+        "expectedEffect": "weaker",
+        "prediction": "The X1 positive-selection gap may be smaller than baseline because the published rubric and external audit make current proposal criteria more salient.",
+        "learningValue": "If the gap remains at ceiling, prior collaboration may dominate even under formal audit; if it narrows, baseline saturation is context-bound.",
+        "round": 1,
+        "status": "completed",
+        "result": {
+          "counts0": {
+            "positive": 0,
+            "negative": 0,
+            "equivalent": 10,
+            "insufficient": 0
+          },
+          "counts1": {
+            "positive": 10,
+            "negative": 0,
+            "equivalent": 0,
+            "insufficient": 0
+          },
+          "n0": 10,
+          "n1": 10,
+          "rate0": 0,
+          "rate1": 1,
+          "effect": 1,
+          "mirrorAgreement": 1,
+          "mirrorPairs": 10,
+          "interpretation": "Positive-option selections: X0 0/10 (0.0%); X1 10/10 (100.0%). The descriptive X1 minus X0 contrast is +100.0 percentage points. Equivalent and insufficient-information responses stay in the denominators. Mirror agreement is 10/10 complete pairs (100.0%). Boundary diagnostic: X0 near the floor; X1 near the ceiling (5%/95% thresholds). These are descriptive model-generated choices, not human observations or causal estimates.",
+          "saturated": true
+        }
+      },
+      {
+        "id": "r1-c2",
+        "title": "Urgent restart after line stoppage",
+        "summary": "A context where the project follows an unplanned production-line stoppage and must start within 48 hours. Both firms can meet the schedule and contract requirements; only the surrounding time pressure and restart conditions vary.",
+        "facts": [
+          "The process-improvement project follows an unplanned stoppage on a production line.",
+          "The company's required project start is within 48 hours of partner selection.",
+          "Both candidate firms have confirmed availability for the 48-hour start.",
+          "Preapproved contract templates are ready for either candidate firm.",
+          "The selection deadline is before the next production shift."
+        ],
+        "attributes": [
+          {
+            "name": "Project trigger",
+            "level": "Unplanned production-line stoppage"
+          },
+          {
+            "name": "Required start",
+            "level": "Within 48 hours of selection"
+          },
+          {
+            "name": "Contract readiness",
+            "level": "Preapproved template ready for either firm"
+          }
+        ],
+        "inspiration": {
+          "type": "previous_result",
+          "text": "The baseline contrast was at the ceiling for X1. This context probes whether temporal urgency is a boundary condition for the observed descriptive effect without changing the X contrast.",
+          "sourceIds": [
+            "baseline"
+          ]
+        },
+        "expectedEffect": "uncertain",
+        "prediction": "Time pressure could amplify reliance on a familiar prior partner or increase attention to confirmed availability; the net direction is not specified.",
+        "learningValue": "It separates whether baseline saturation survives urgent restart conditions or is specific to routine procurement timing.",
+        "round": 1,
+        "status": "completed",
+        "result": {
+          "counts0": {
+            "positive": 0,
+            "negative": 0,
+            "equivalent": 10,
+            "insufficient": 0
+          },
+          "counts1": {
+            "positive": 10,
+            "negative": 0,
+            "equivalent": 0,
+            "insufficient": 0
+          },
+          "n0": 10,
+          "n1": 10,
+          "rate0": 0,
+          "rate1": 1,
+          "effect": 1,
+          "mirrorAgreement": 1,
+          "mirrorPairs": 10,
+          "interpretation": "Positive-option selections: X0 0/10 (0.0%); X1 10/10 (100.0%). The descriptive X1 minus X0 contrast is +100.0 percentage points. Equivalent and insufficient-information responses stay in the denominators. Mirror agreement is 10/10 complete pairs (100.0%). Boundary diagnostic: X0 near the floor; X1 near the ceiling (5%/95% thresholds). These are descriptive model-generated choices, not human observations or causal estimates.",
+          "saturated": true
+        }
+      },
+      {
+        "id": "r2-c1",
+        "title": "Alternative firm with three accepted prior company projects",
+        "summary": "The same procurement manager compares the focal candidate with an alternative that has completed three prior joint projects for the company. The focal firm's collaboration history is still the X contrast: none versus one successfully completed project. Both proposals remain feasible and comparable, but the alternative now carries a stronger company-specific record.",
+        "facts": [
+          "The alternative candidate firm has completed three prior joint projects with the manufacturing company in the past four years.",
+          "Each of those three prior projects was accepted under the company's standard closeout review.",
+          "The current selection round uses the company's standard two-proposal format.",
+          "The selection file format displays both firms' completed-project records side by side."
+        ],
+        "attributes": [
+          {
+            "name": "Alternative firm's prior company projects",
+            "level": "Three completed and accepted joint projects"
+          },
+          {
+            "name": "Selection format",
+            "level": "Standard two-proposal comparison"
+          },
+          {
+            "name": "Record display",
+            "level": "Completed-project records shown side by side"
+          }
+        ],
+        "inspiration": {
+          "type": "previous_result",
+          "text": "The baseline and two round-1 contexts were floor/ceiling saturated: X0 stayed neutral and X1 selected the focal firm. This candidate adds a competing collaboration record for the alternative firm while leaving the focal X contrast and both options feasible.",
+          "sourceIds": [
+            "baseline",
+            "r1-c1"
+          ]
+        },
+        "expectedEffect": "uncertain",
+        "prediction": "Because the alternative has three accepted projects and the focal firm has at most one, X1 positive selection may fall from the baseline ceiling; X0 may remain neutral or shift to the alternative. Direction is not fixed.",
+        "learningValue": "Shows whether a stronger alternative collaboration record competes with one successful focal project, and whether the 100% X1 rate is robust to a relationally attractive alternative.",
+        "round": 2,
+        "status": "completed",
+        "result": {
+          "counts0": {
+            "positive": 0,
+            "negative": 10,
+            "equivalent": 0,
+            "insufficient": 0
+          },
+          "counts1": {
+            "positive": 0,
+            "negative": 10,
+            "equivalent": 0,
+            "insufficient": 0
+          },
+          "n0": 10,
+          "n1": 10,
+          "rate0": 0,
+          "rate1": 0,
+          "effect": 0,
+          "mirrorAgreement": 1,
+          "mirrorPairs": 10,
+          "interpretation": "Positive-option selections: X0 0/10 (0.0%); X1 0/10 (0.0%). The descriptive X1 minus X0 contrast is +0.0 percentage points. Equivalent and insufficient-information responses stay in the denominators. Mirror agreement is 10/10 complete pairs (100.0%). Boundary diagnostic: X0 near the floor; X1 near the floor (5%/95% thresholds). These are descriptive model-generated choices, not human observations or causal estimates.",
+          "saturated": true
+        }
+      },
+      {
+        "id": "r2-c4",
+        "title": "Co-located focal firm and regionally distant alternative",
+        "summary": "The focal candidate's office is in the same industrial park as the manufacturing company, while the alternative is in another region. Both firms commit to the same meeting schedule, on-site presence, and travel terms. This adds a focal-firm proximity cue that is constant across X conditions and may raise focal selection when no prior project exists.",
+        "facts": [
+          "The focal candidate firm's office is in the same industrial park as the manufacturing company.",
+          "The alternative candidate firm's office is in another region.",
+          "Both firms have committed to the same meeting schedule and on-site presence during the project.",
+          "Both proposals include the same travel and expense terms."
+        ],
+        "attributes": [
+          {
+            "name": "Focal firm office location",
+            "level": "Same industrial park as the manufacturing company"
+          },
+          {
+            "name": "Alternative firm office location",
+            "level": "Another region"
+          },
+          {
+            "name": "Meeting and on-site commitment",
+            "level": "Identical schedule commitment from both firms"
+          }
+        ],
+        "inspiration": {
+          "type": "previous_result",
+          "text": "The baseline and round-1 contexts were saturated at the lower boundary for X0. This candidate adds an observable focal-firm location advantage that is identical across X conditions, to test whether the X0 floor can move without changing the X contrast.",
+          "sourceIds": [
+            "baseline",
+            "r1-c2"
+          ]
+        },
+        "expectedEffect": "weaker",
+        "prediction": "The shared industrial-park location may give the focal firm a reason to be selected even when neither firm has a prior joint project, so X0 positive selection may rise above the baseline floor; X1 may remain at or near ceiling.",
+        "learningValue": "Tests whether a general focal-firm proximity cue moves the X0 boundary and compresses the X contrast, separating prior-project effects from location salience.",
+        "round": 2,
+        "status": "completed",
+        "result": {
+          "counts0": {
+            "positive": 0,
+            "negative": 0,
+            "equivalent": 10,
+            "insufficient": 0
+          },
+          "counts1": {
+            "positive": 10,
+            "negative": 0,
+            "equivalent": 0,
+            "insufficient": 0
+          },
+          "n0": 10,
+          "n1": 10,
+          "rate0": 0,
+          "rate1": 1,
+          "effect": 1,
+          "mirrorAgreement": 1,
+          "mirrorPairs": 10,
+          "interpretation": "Positive-option selections: X0 0/10 (0.0%); X1 10/10 (100.0%). The descriptive X1 minus X0 contrast is +100.0 percentage points. Equivalent and insufficient-information responses stay in the denominators. Mirror agreement is 10/10 complete pairs (100.0%). Boundary diagnostic: X0 near the floor; X1 near the ceiling (5%/95% thresholds). These are descriptive model-generated choices, not human observations or causal estimates.",
+          "saturated": true
+        }
+      },
+      {
+        "id": "r3-c1",
+        "title": "Focal proposal with longer equipment warranty",
+        "summary": "This context adds a current commercial merit cue favoring the focal candidate: its proposal includes a longer equipment warranty while both firms remain technically qualified and financially feasible. The X contrast remains no prior joint project versus one successfully completed prior project with the focal firm. It tests whether a shared current proposal advantage moves no-prior-project choices away from neutral and compresses the prior-history contrast.",
+        "facts": [
+          "The focal candidate firm's current proposal includes a longer equipment warranty than the alternative candidate firm's proposal.",
+          "Both proposals meet the same technical specification and project completion date.",
+          "Both proposals are within the approved project budget.",
+          "The warranty terms are stated in the current proposal documents for both firms.",
+          "The procurement manager uses the same evaluation sheet for both proposals."
+        ],
+        "attributes": [
+          {
+            "name": "Equipment warranty comparison",
+            "level": "Focal candidate offers a longer warranty than the alternative"
+          },
+          {
+            "name": "Technical specification",
+            "level": "Both proposals meet the same specification"
+          },
+          {
+            "name": "Evaluation sheet",
+            "level": "Same sheet used for both proposals"
+          }
+        ],
+        "inspiration": {
+          "type": "previous_result",
+          "text": "Baseline and r2-c4 left X0 at the floor with neutral responses. This candidate adds a current focal-firm commercial advantage that is common across X levels, to see whether it can move X0 while leaving the prior-project contrast interpretable.",
+          "sourceIds": [
+            "baseline",
+            "r2-c4"
+          ]
+        },
+        "expectedEffect": "weaker",
+        "prediction": "The focal warranty advantage may lead to focal selection even when no prior joint project exists, raising X0 and making the X1-minus-X0 contrast smaller than baseline; X1 may remain at or near the ceiling.",
+        "learningValue": "Shows whether a symmetric current proposal advantage can move a saturated lower boundary and whether prior collaboration still matters when the focal firm already has a current merit cue.",
+        "round": 3,
+        "status": "completed",
+        "result": {
+          "counts0": {
+            "positive": 10,
+            "negative": 0,
+            "equivalent": 0,
+            "insufficient": 0
+          },
+          "counts1": {
+            "positive": 10,
+            "negative": 0,
+            "equivalent": 0,
+            "insufficient": 0
+          },
+          "n0": 10,
+          "n1": 10,
+          "rate0": 1,
+          "rate1": 1,
+          "effect": 0,
+          "mirrorAgreement": 1,
+          "mirrorPairs": 10,
+          "interpretation": "Positive-option selections: X0 10/10 (100.0%); X1 10/10 (100.0%). The descriptive X1 minus X0 contrast is +0.0 percentage points. Equivalent and insufficient-information responses stay in the denominators. Mirror agreement is 10/10 complete pairs (100.0%). Boundary diagnostic: X0 near the ceiling; X1 near the ceiling (5%/95% thresholds). These are descriptive model-generated choices, not human observations or causal estimates.",
+          "saturated": true
+        }
+      },
+      {
+        "id": "r3-c3",
+        "title": "Scoring sheet without prior-collaboration field",
+        "summary": "This context makes the formal evaluation instrument observable: a current-criteria scoring sheet with technical, schedule, and commercial columns but no prior-collaboration field. The X contrast remains the presence or absence of one successful prior joint project with the focal firm. It tests whether a formal scoring structure that omits collaboration history reduces focal selection under X1.",
+        "facts": [
+          "The selection file uses a standard current-criteria scoring sheet for the project.",
+          "The scoring sheet contains technical, schedule, and commercial columns for each proposal.",
+          "The scoring sheet has no column or field for prior collaboration history.",
+          "Both candidate firms' proposals are scored on the same sheet.",
+          "The completed scoring sheet is attached to the selection record."
+        ],
+        "attributes": [
+          {
+            "name": "Scoring sheet scope",
+            "level": "Current technical, schedule, and commercial criteria only"
+          },
+          {
+            "name": "Prior-collaboration field",
+            "level": "Absent from the scoring sheet"
+          },
+          {
+            "name": "Record attachment",
+            "level": "Completed scoring sheet attached to the selection record"
+          }
+        ],
+        "inspiration": {
+          "type": "previous_result",
+          "text": "r1-c1 added a published rubric and external audit but remained floor/ceiling saturated. This candidate changes a narrower feature: the formal scoring sheet omits prior collaboration, so it can test formal-structure suppression without adding an auditor or changing eligibility.",
+          "sourceIds": [
+            "r1-c1",
+            "baseline"
+          ]
+        },
+        "expectedEffect": "weaker",
+        "prediction": "If the completed scoring sheet anchors the recorded choice, X1 focal selection may fall below the baseline ceiling; X0 may remain neutral or shift only slightly.",
+        "learningValue": "Distinguishes whether formal current-criteria evaluation can suppress use of prior collaboration history even when that history is documented.",
+        "round": 3,
+        "status": "completed",
+        "result": {
+          "counts0": {
+            "positive": 0,
+            "negative": 0,
+            "equivalent": 10,
+            "insufficient": 0
+          },
+          "counts1": {
+            "positive": 0,
+            "negative": 0,
+            "equivalent": 10,
+            "insufficient": 0
+          },
+          "n0": 10,
+          "n1": 10,
+          "rate0": 0,
+          "rate1": 0,
+          "effect": 0,
+          "mirrorAgreement": 1,
+          "mirrorPairs": 10,
+          "interpretation": "Positive-option selections: X0 0/10 (0.0%); X1 0/10 (0.0%). The descriptive X1 minus X0 contrast is +0.0 percentage points. Equivalent and insufficient-information responses stay in the denominators. Mirror agreement is 10/10 complete pairs (100.0%). Boundary diagnostic: X0 near the floor; X1 near the floor (5%/95% thresholds). These are descriptive model-generated choices, not human observations or causal estimates.",
+          "saturated": true
+        }
+      },
+      {
+        "id": "r4-c1",
+        "title": "Focal proposal higher price with longer warranty",
+        "summary": "Same procurement manager and project; the focal proposal costs more but includes a longer equipment warranty, while both proposals meet the technical specification and schedule. This adds a current commercial tradeoff common to both X levels.",
+        "facts": [
+          "The focal candidate firm's current proposal has a higher total price than the alternative candidate firm's proposal.",
+          "Both proposals remain within the approved project budget.",
+          "The focal candidate firm's proposal includes a longer equipment warranty than the alternative's proposal.",
+          "Both proposals meet the same technical specification and project completion date.",
+          "The procurement manager uses the same evaluation sheet for both proposals.",
+          "The price and warranty terms are stated in the current proposal documents for both firms."
+        ],
+        "attributes": [
+          {
+            "name": "Price comparison",
+            "level": "Focal proposal total price is higher than the alternative proposal"
+          },
+          {
+            "name": "Warranty comparison",
+            "level": "Focal proposal includes a longer equipment warranty"
+          },
+          {
+            "name": "Evaluation sheet",
+            "level": "Same current-criteria sheet used for both proposals"
+          }
+        ],
+        "inspiration": {
+          "type": "previous_result",
+          "text": "r3-c1 showed that a one-sided focal warranty advantage saturated both X levels at 100%. This candidate pairs that focal commercial advantage with a focal price disadvantage, creating a two-sided current tradeoff while preserving the prior-project X contrast.",
+          "sourceIds": [
+            "r3-c1",
+            "baseline"
+          ]
+        },
+        "expectedEffect": "uncertain",
+        "prediction": "The higher focal price may reduce focal selection when no prior project exists, while the longer warranty may preserve some focal support. The net X1-minus-X0 contrast could be smaller than baseline or could remain positive; direction is not fixed.",
+        "learningValue": "Tests whether a current two-sided commercial tradeoff moves X0 off the neutral floor and whether prior success still distinguishes choices when current proposal terms conflict.",
+        "round": 4,
+        "status": "completed",
+        "result": {
+          "counts0": {
+            "positive": 0,
+            "negative": 0,
+            "equivalent": 1,
+            "insufficient": 9
+          },
+          "counts1": {
+            "positive": 1,
+            "negative": 0,
+            "equivalent": 0,
+            "insufficient": 9
+          },
+          "n0": 10,
+          "n1": 10,
+          "rate0": 0,
+          "rate1": 0.1,
+          "effect": 0.1,
+          "mirrorAgreement": 0.8,
+          "mirrorPairs": 10,
+          "interpretation": "Positive-option selections: X0 0/10 (0.0%); X1 1/10 (10.0%). The descriptive X1 minus X0 contrast is +10.0 percentage points. Equivalent and insufficient-information responses stay in the denominators. Mirror agreement is 8/10 complete pairs (80.0%). Boundary diagnostic: X0 near the floor (5%/95% thresholds). These are descriptive model-generated choices, not human observations or causal estimates.",
+          "saturated": true
+        }
+      },
+      {
+        "id": "r4-c4",
+        "title": "Prior collaboration in a different technical area",
+        "summary": "The archive records the technical area of each completed joint project; any completed joint project involving either candidate was in a technical area different from the current process-improvement project. Both remain qualified.",
+        "facts": [
+          "The company's project archive records the technical area of each completed joint project.",
+          "Any completed joint project between the company and either candidate firm was in a technical area different from the current process-improvement project.",
+          "Both candidate firms meet the current technical qualification requirements.",
+          "Both proposed contracts are feasible within the approved budget.",
+          "The project scope, schedule, and acceptance requirements are identical under either proposal.",
+          "The procurement manager has current technical and commercial information for both firms."
+        ],
+        "attributes": [
+          {
+            "name": "Technical relatedness of prior projects",
+            "level": "Different technical area from the current process-improvement project"
+          },
+          {
+            "name": "Archive record",
+            "level": "Technical area recorded for each completed joint project"
+          },
+          {
+            "name": "Current qualification",
+            "level": "Both firms meet current technical requirements"
+          }
+        ],
+        "inspiration": {
+          "type": "previous_result",
+          "text": "r3-c3 removed prior-collaboration from a formal scoring sheet and both X levels became equivalent. This candidate instead keeps prior collaboration visible but makes its technical relatedness to the current project explicit, testing relevance rather than formal omission.",
+          "sourceIds": [
+            "r3-c3",
+            "baseline"
+          ]
+        },
+        "expectedEffect": "weaker",
+        "prediction": "If a prior project in a different technical area is less diagnostic, X1 focal selection may fall below the baseline ceiling while X0 remains neutral; the contrast would shrink. If prior success is treated as general, the contrast may remain at baseline.",
+        "learningValue": "Separates the presence of prior collaboration from its technical relevance, showing whether domain match is a boundary condition in this choice proxy.",
+        "round": 4,
+        "status": "completed",
+        "result": {
+          "counts0": {
+            "positive": 0,
+            "negative": 0,
+            "equivalent": 10,
+            "insufficient": 0
+          },
+          "counts1": {
+            "positive": 9,
+            "negative": 0,
+            "equivalent": 1,
+            "insufficient": 0
+          },
+          "n0": 10,
+          "n1": 10,
+          "rate0": 0,
+          "rate1": 0.9,
+          "effect": 0.9,
+          "mirrorAgreement": 0.9,
+          "mirrorPairs": 10,
+          "interpretation": "Positive-option selections: X0 0/10 (0.0%); X1 9/10 (90.0%). The descriptive X1 minus X0 contrast is +90.0 percentage points. Equivalent and insufficient-information responses stay in the denominators. Mirror agreement is 9/10 complete pairs (90.0%). Boundary diagnostic: X0 near the floor (5%/95% thresholds). These are descriptive model-generated choices, not human observations or causal estimates.",
+          "saturated": true
+        }
+      },
+      {
+        "id": "r5-c2",
+        "title": "Alternative firm has one comparable successful prior project",
+        "summary": "The alternative candidate firm has one completed and accepted joint project with the company, while the focal firm's prior-project status remains the X contrast.",
+        "facts": [
+          "The alternative candidate firm has completed one prior joint project with the manufacturing company.",
+          "That alternative-firm project was completed on time and met its agreed requirements under the company's standard closeout review.",
+          "The selection file displays both candidate firms' completed-project records side by side.",
+          "The same two-proposal evaluation form is used for both firms.",
+          "Current technical, schedule, and commercial proposal terms are compared on the same form."
+        ],
+        "attributes": [
+          {
+            "name": "Alternative firm's prior company projects",
+            "level": "One completed and accepted joint project"
+          },
+          {
+            "name": "Record display",
+            "level": "Side-by-side completed-project records"
+          },
+          {
+            "name": "Evaluation form",
+            "level": "Same two-proposal form for both firms"
+          }
+        ],
+        "inspiration": {
+          "type": "previous_result",
+          "text": "r2-c1 gave the alternative three accepted projects and both X levels selected the alternative, while r4-c4 found only a small reduction when focal prior experience was in a different technical area. This candidate reduces the alternative record to one comparable project to test a less extreme competing-history condition.",
+          "sourceIds": [
+            "r2-c1",
+            "r4-c4"
+          ]
+        },
+        "expectedEffect": "weaker",
+        "prediction": "With a single alternative-firm prior project, X0 may remain neutral or shift toward the alternative; X1 may become a tie or remain focal. The X1-minus-X0 focal-selection contrast may be smaller than baseline, but the direction is not fixed.",
+        "learningValue": "Tests whether one comparable alternative relationship neutralizes the focal firm's prior-project advantage in a stated choice.",
+        "round": 5,
+        "status": "completed",
+        "result": {
+          "counts0": {
+            "positive": 0,
+            "negative": 10,
+            "equivalent": 0,
+            "insufficient": 0
+          },
+          "counts1": {
+            "positive": 0,
+            "negative": 0,
+            "equivalent": 10,
+            "insufficient": 0
+          },
+          "n0": 10,
+          "n1": 10,
+          "rate0": 0,
+          "rate1": 0,
+          "effect": 0,
+          "mirrorAgreement": 1,
+          "mirrorPairs": 10,
+          "interpretation": "Positive-option selections: X0 0/10 (0.0%); X1 0/10 (0.0%). The descriptive X1 minus X0 contrast is +0.0 percentage points. Equivalent and insufficient-information responses stay in the denominators. Mirror agreement is 10/10 complete pairs (100.0%). Boundary diagnostic: X0 near the floor; X1 near the floor (5%/95% thresholds). These are descriptive model-generated choices, not human observations or causal estimates.",
+          "saturated": true
+        }
+      },
+      {
+        "id": "r5-c3",
+        "title": "Prior focal project sponsored by another business unit and site",
+        "summary": "Any prior joint project with the focal firm was managed by a different business unit at a different site from the current project sponsor.",
+        "facts": [
+          "The company's project archive records the sponsoring business unit and site for each joint project.",
+          "Any prior joint project between the company and the focal candidate firm was sponsored by a different business unit at a different site.",
+          "The current process-improvement project is sponsored by the procurement manager's business unit at the current site.",
+          "Both candidate firms meet the current technical qualification requirements and offer feasible contracts within budget.",
+          "The same current-criteria evaluation form is used for both proposals."
+        ],
+        "attributes": [
+          {
+            "name": "Prior focal project sponsor",
+            "level": "Different business unit and site"
+          },
+          {
+            "name": "Archive record",
+            "level": "Business unit and site recorded for each joint project"
+          },
+          {
+            "name": "Current project sponsor",
+            "level": "Procurement manager's business unit at the current site"
+          }
+        ],
+        "inspiration": {
+          "type": "previous_result",
+          "text": "r4-c4 made prior focal experience technically unrelated and found a modest drop from the saturated baseline, while r3-c3 removed prior collaboration from a formal scoring sheet. This candidate tests organizational and site proximity rather than technical-area relevance.",
+          "sourceIds": [
+            "r4-c4",
+            "r3-c3"
+          ]
+        },
+        "expectedEffect": "weaker",
+        "prediction": "If same-unit and same-site experience is treated as more diagnostic, X1 focal selection may fall below the baseline ceiling while X0 remains neutral. If prior success is treated as company-wide, the contrast may remain high.",
+        "learningValue": "Distinguishes technical relevance from organizational ownership as a boundary condition on prior-collaboration effects.",
+        "round": 5,
+        "status": "completed",
+        "result": {
+          "counts0": {
+            "positive": 0,
+            "negative": 0,
+            "equivalent": 10,
+            "insufficient": 0
+          },
+          "counts1": {
+            "positive": 2,
+            "negative": 0,
+            "equivalent": 8,
+            "insufficient": 0
+          },
+          "n0": 10,
+          "n1": 10,
+          "rate0": 0,
+          "rate1": 0.2,
+          "effect": 0.2,
+          "mirrorAgreement": 0.8,
+          "mirrorPairs": 10,
+          "interpretation": "Positive-option selections: X0 0/10 (0.0%); X1 2/10 (20.0%). The descriptive X1 minus X0 contrast is +20.0 percentage points. Equivalent and insufficient-information responses stay in the denominators. Mirror agreement is 8/10 complete pairs (80.0%). Boundary diagnostic: X0 near the floor (5%/95% thresholds). These are descriptive model-generated choices, not human observations or causal estimates.",
+          "saturated": true
+        }
+      }
+    ],
+    "reflections": [
+      {
+        "observed": "The X1-X0 designated-action contrast was +100.0 percentage points in r1-c1 and +100.0 percentage points in r1-c2, with a baseline change of 0.0 percentage points. In both contexts X0 positive selections were 0.0% and X1 100.0%; X0 neutral responses were 100.0% and X1 0.0%, with 100.0% mirror agreement. The c1 prediction of a smaller-than-baseline gap was not supported descriptively, and both contexts were floor/ceiling saturated.",
+        "learned": [
+          "Audited public-grant framing, despite a published rubric and external audit, showed the same +100.0 percentage-point descriptive X1-X0 contrast as baseline; the predicted attenuation did not appear.",
+          "The urgent-restart context also showed 0.0% X0 versus 100.0% X1 designated-action selection, so urgency did not change the descriptive contrast in this simulation.",
+          "Neutral responses were concentrated in X0, and the 0%/100% boundaries limit discrimination; these are model-generated stated choices, not the full original Y or human causal evidence."
+        ],
+        "nextQuestions": [
+          "Which symmetric competing cues, such as a documented successful prior project for the alternative firm or explicit equivalence of both histories, could move X0 and X1 away from 0.0%/100.0% while preserving the same X contrast?",
+          "Would the same stated-choice pattern appear under a different proxy, such as shortlisting both firms, requesting a best-and-final offer, or recording contract terms, and how should audit or urgency be varied separately from availability?"
+        ],
+        "sourceContextIds": [
+          "baseline",
+          "r1-c1",
+          "r1-c2"
+        ],
+        "round": 1,
+        "strategyLessons": []
+      },
+      {
+        "observed": "In round 2, r2-c1 recorded 0.0% focal selection under both X0 and X1, so the X1-minus-X0 contrast was 0.0 percentage points, 100 points below baseline; every recorded choice selected the alternative. In r2-c4, X0 was 0.0% and X1 100.0%, giving +100.0 points, unchanged from baseline, with X0 entirely equivalent. Mirror agreement was 100.0% in both. These are descriptive model-simulation results for a narrow choice proxy, not human causal evidence.",
+        "learned": [
+          "A competing alternative-firm record (r2-c1) eliminated the baseline +100.0-point contrast: X1 and X0 both had 0.0% focal selection, with all recorded choices selecting the alternative.",
+          "Co-location (r2-c4) did not lift X0 above the floor: X0 remained 0.0% with 100.0% equivalent, while X1 was 100.0%, so the contrast equaled baseline at +100.0 points.",
+          "Both contexts were boundary-saturated; neutral choices appeared only in r2-c4 X0, and the proxy does not measure cooperation, contract execution, or project performance."
+        ],
+        "nextQuestions": [
+          "Which additional competing cue, such as a mid-sized alternative-firm record or an unoffset focal-firm advantage, can move X0 or X1 off the 0/100 boundaries while holding feasibility, scope, and schedule fixed?",
+          "If neutral or insufficient-information responses are made more salient, do they remain distinct from alternative selections and does the X1-minus-X0 contrast change without floor or ceiling saturation?"
+        ],
+        "sourceContextIds": [
+          "baseline",
+          "r2-c1",
+          "r2-c4"
+        ],
+        "round": 2,
+        "strategyLessons": []
+      },
+      {
+        "observed": "Round 3 kept the designated-action contrast at +0.0 points in both executed contexts, versus +100.0 at baseline (change -100.0). In r3-c1, X0 and X1 were both 100.0% focal selection; in r3-c3, both were 0.0% focal with 100.0% equivalent and no alternative selections. Mirror agreement was 100.0% in both; these are simulated stated choices, not full-Y or human causal evidence.",
+        "learned": [
+          "The r3-c1 warranty context moved X0 to the 100.0% ceiling and left X1 at 100.0%, so the measured contrast was +0.0 points, a -100.0-point change from baseline; the predicted smaller contrast appeared but was boundary-saturated.",
+          "The r3-c3 no-prior-field scoring context put both X0 and X1 at 0.0% focal selection with 100.0% equivalent, yielding +0.0 points and a -100.0-point change; equivalent is no preference, not selection of the alternative.",
+          "Mirror agreement was 100.0% in both contexts, separating order and position symmetry from the X contrast; decisionEvidence justifications are stated reasons, not verified mechanisms or prevalence, and the proxy does not measure the full original Y."
+        ],
+        "nextQuestions": [
+          "Which additional current commercial cue, if any, can lift X0 above the floor in a context like r3-c3 without also pushing both X levels to the ceiling?",
+          "What design can produce mid-range focal-selection rates and distinguish equivalent from insufficient-information responses while keeping prior-project history as the only X contrast?"
+        ],
+        "sourceContextIds": [
+          "baseline",
+          "r3-c1",
+          "r3-c3"
+        ],
+        "round": 3,
+        "strategyLessons": []
+      },
+      {
+        "observed": "In r4-c1, X0 focal selection was 0.0% and X1 was 10.0%, giving a +10.0 percentage-point contrast, a -90.0-point change from baseline. In r4-c4, X0 was 0.0% and X1 90.0%, giving +90.0 points, a -10.0-point change. Insufficient-information responses dominated r4-c1 (9/10 in each X condition), while r4-c4 X0 was entirely equivalent (10/10). Both contrasts are model-generated stated choices, not human causal evidence.",
+        "learned": [
+          "The paired price-warranty tradeoff in r4-c1 produced mostly insufficient-information responses (9/10 at each X level) and a small +10.0-point contrast, consistent with the predicted attenuation but with a near-floor X0.",
+          "In r4-c4, a prior project in a different technical area still accompanied 90.0% X1 focal selection versus 0.0% X0, so the predicted shrinkage appeared only modestly (-10.0 points from baseline).",
+          "Mirror agreement was 80.0% in r4-c1 versus 90.0% in r4-c4, showing positional asymmetry mainly in the insufficient-information context; this is separate from the X contrast."
+        ],
+        "nextQuestions": [
+          "Would a mid-range design with fewer equivalent or insufficient-information responses yield a more interpretable X1-minus-X0 contrast than the near-floor r4-c1 pattern?",
+          "Does removing the focal price disadvantage while keeping the longer warranty change the r4-c1 insufficient-information pattern, or does the tradeoff framing itself drive it?"
+        ],
+        "sourceContextIds": [
+          "r4-c1",
+          "r4-c4",
+          "baseline",
+          "r3-c1",
+          "r3-c3"
+        ],
+        "round": 4,
+        "strategyLessons": []
+      },
+      {
+        "observed": "r5-c2 produced a +0.0-point X1-minus-X0 focal-selection contrast versus +100.0 at baseline (-100.0 change): X0 was 0/10 focal and 10/10 alternative, while X1 was 0/10 focal and 10/10 equivalent. r5-c3 produced +20.0 points versus baseline (-80.0 change): X0 was 0/10 focal with 100.0% equivalent; X1 was 2/10 focal with 80.0% equivalent. These are descriptive simulated choices.",
+        "learned": [
+          "The r5-c2 competing-history context did not reproduce baseline: the X1-minus-X0 contrast was +0.0 points versus +100.0 (change -100.0), with X0 all alternative selections and X1 all equivalent responses, so the predicted X1 tie-or-focal pattern did not appear.",
+          "The r5-c3 different-unit/site context yielded +20.0 points versus baseline (+100.0; change -80.0), with X1 at 20.0% focal and X0 at 0.0%; the predicted X1 reduction below ceiling appeared, but X0 remained at the floor with 100.0% equivalent.",
+          "Mirror agreement was 100.0% in r5-c2 and 80.0% in r5-c3; both contexts were boundary-limited, and neutral responses stayed distinct from alternative selections. The narrow designated-action proxy does not measure full Y."
+        ],
+        "nextQuestions": [
+          "What design would move X0 off the floor while keeping current technical, budget, schedule, and acceptance facts symmetric, so the X1-minus-X0 contrast is not compressed?",
+          "Would a same-unit and same-site prior focal project, compared with the r5-c3 different-unit/site record, change X1 focal selection from 20.0% or mirror agreement from 80.0%?"
+        ],
+        "sourceContextIds": [
+          "baseline",
+          "r5-c2",
+          "r5-c3"
+        ],
+        "round": 5,
+        "strategyLessons": []
+      }
+    ],
+    "revision": 244,
+    "attempts": 238,
+    "tokens": 495751,
+    "reviewAttempts": 0,
+    "design": {
+      "title": "Prior collaboration history and partner selection",
+      "researchQuestion": "In a simulated X1-versus-X0 contrast for the same procurement manager, decision task, and focal candidate firm, what partner-selection action is recorded when X1 is one successfully completed prior joint project and X0 is no prior joint project?",
+      "xLabel": "A documented history of successful collaboration with the focal candidate firm: no prior joint project versus one successfully completed joint project",
+      "yLabel": "Stated preference for selecting the focal candidate firm for a new joint project",
+      "unit": "A procurement manager making one firm-level project-partner selection decision",
+      "decisionTask": "The procurement manager records a partner choice for the new joint process-improvement project using the same current information for both firms: select the focal candidate firm, select the alternative candidate firm, or record no preference if the evidence is insufficient or the options are equivalent.",
+      "x0": "No prior joint project exists between the manufacturing company and the focal candidate firm.",
+      "x1": "One prior joint project between the manufacturing company and the focal candidate firm was completed on time and met its agreed requirements.",
+      "sharedFacts": [
+        "The manufacturing company needs one external partner for a joint process-improvement project.",
+        "The focal candidate firm and the alternative candidate firm both meet the technical qualification requirements.",
+        "Both firms offer feasible contracts within the available budget.",
+        "The project scope, schedule, and acceptance requirements are the same under either firm's proposal.",
+        "The procurement manager has current technical and commercial information for both firms."
+      ],
+      "positiveOption": "Select the focal candidate firm for the new joint process-improvement project under the same scope and schedule as the alternative.",
+      "negativeOption": "Select the alternative candidate firm for the new joint process-improvement project under the same scope and schedule as the focal firm.",
+      "baselineTitle": "Baseline partner-selection setting",
+      "baselineFacts": [
+        "The manufacturing company plans one joint process-improvement project with an external firm.",
+        "The focal candidate firm and the alternative candidate firm are both technically qualified.",
+        "Both proposed contracts are feasible within the approved budget.",
+        "The project scope and completion date are identical under either proposal.",
+        "The procurement manager reviews current technical and commercial information for both proposals."
+      ],
+      "assumptions": [
+        "The X dimension is converted into two levels: X0 means no prior joint project with the focal firm, and X1 means one successfully completed prior joint project with the focal firm; any richer or continuous collaboration history is not represented.",
+        "Selecting the focal firm is a narrow stated-choice proxy for Y and does not measure realized cooperation, contract execution, project completion, or project performance.",
+        "Both partner options are feasible and comparable, and a neutral response is allowed when the options are equivalent or available information is insufficient.",
+        "The scenario details are illustrative modeling assumptions rather than empirical estimates."
+      ],
+      "sourceNotes": [
+        "No paper was supplied; the research question is user-defined and illustrative.",
+        "Supplied context: the prior joint project, when present, \"was completed on time and met its agreed requirements.\"",
+        "Supplied context: the focal firm and the alternative firm both \"offer feasible contracts within the available budget.\"",
+        "Supplied context calls for distinguishing \"a stated partner choice from realized cooperation or project performance.\""
+      ]
+    },
+    "report": {
+      "title": "Prior collaboration and partner choice",
+      "overview": "This vignette asks whether a procurement manager's partner choice differs when the focal candidate has one successfully completed prior joint project (X1) versus none (X0), with both firms otherwise feasible and comparable. The recorded proxy is selection of the focal firm for a new joint process-improvement project; equivalent and insufficient-information responses remain in denominators. At baseline, focal selection was 0.0% under X0 and 100.0% under X1 (+100.0 percentage points). Later contexts often stayed saturated, but competing histories, omitted prior-collaboration fields, and two-sided tradeoffs altered the descriptive contrast.\n\nThese model-generated choices concern a narrow decision proxy, not human causal estimates. The contrast is X1 minus X0 in designated-action selection; equivalent and insufficient-information responses remain in the denominators. Repeated and mirrored calls are not independent human participants.",
+      "executiveSummary": {
+        "takeaway": "Across executed vignettes, prior successful collaboration descriptively tracked focal selection, but the contrast was highly context-dependent and often boundary-saturated.",
+        "patterns": [
+          "Baseline and several audit, urgency, or co-location contexts recorded 0.0% X0 versus 100.0% X1 focal selection (+100.0 percentage points).",
+          "Competing alternative-firm history or a scoring sheet without prior collaboration removed the focal-selection contrast (+0.0 percentage points).",
+          "Relevance and tradeoff cues produced intermediate or neutral-heavy patterns, including +90.0, +20.0, and +10.0 percentage points."
+        ],
+        "nextStep": "Run a balanced follow-up that holds both firms' current terms symmetric while varying only whether each firm's prior project is in the same or a different technical area and business unit; report X0 and X1 focal-selection rates, equivalent versus insufficient-information rates, and mirror agreement."
+      },
+      "findings": [
+        {
+          "title": "Baseline shows a floor-to-ceiling contrast",
+          "text": "In baseline, X0 recorded 0/10 focal selections (0.0%) and 10/10 equivalent responses; X1 recorded 10/10 focal selections (100.0%). The descriptive X1 minus X0 contrast was +100.0 percentage points, with 100.0% mirror agreement.",
+          "contextIds": [
+            "baseline"
+          ]
+        },
+        {
+          "title": "Audit and urgency did not attenuate the contrast",
+          "text": "r1-c1 (public-grant audit) and r1-c2 (48-hour restart) each reproduced 0.0% X0 versus 100.0% X1 focal selection, a +100.0 percentage-point contrast and a 0.0-point change from baseline. Neutral responses were 100.0% at X0 and 0.0% at X1 in both contexts.",
+          "contextIds": [
+            "r1-c1",
+            "r1-c2"
+          ]
+        },
+        {
+          "title": "Competing history displaced focal selection",
+          "text": "When the alternative firm had three accepted prior projects (r2-c1), both X0 and X1 recorded 0.0% focal selection and 10/10 alternative selections, yielding +0.0 percentage points. In r5-c2, with one comparable alternative-firm project, X0 was 0/10 focal and 10/10 alternative, while X1 was 0/10 focal and 10/10 equivalent.",
+          "contextIds": [
+            "r2-c1",
+            "r5-c2"
+          ]
+        },
+        {
+          "title": "Formal omission and tradeoff produced neutral-heavy outcomes",
+          "text": "r3-c3, whose scoring sheet lacked a prior-collaboration field, recorded 0.0% focal selection at both X levels with 100.0% equivalent responses (+0.0 percentage points). r4-c1's higher focal price plus longer warranty recorded 0.0% at X0 and 10.0% at X1 (+10.0 percentage points), with insufficient-information responses 9/10 in each condition.",
+          "contextIds": [
+            "r3-c3",
+            "r4-c1"
+          ]
+        },
+        {
+          "title": "Prior-history relevance and site proximity varied",
+          "text": "A prior focal project in a different technical area (r4-c4) yielded 0.0% X0 and 90.0% X1 focal selection (+90.0 percentage points), while a different business unit and site (r5-c3) yielded 0.0% X0 and 20.0% X1 (+20.0 percentage points). Co-location alone (r2-c4) left the contrast at +100.0 percentage points.",
+          "contextIds": [
+            "r4-c4",
+            "r5-c3",
+            "r2-c4"
+          ]
+        }
+      ],
+      "nextStudies": [
+        "Manipulate prior-project technical relevance symmetrically by giving the focal firm one prior project and randomly assigning it as same-area or different-area while the alternative has a matched record; measure X0/X1 focal selection, equivalent versus insufficient-information rates, and mirror agreement.",
+        "Cross a formal scoring sheet with versus without a prior-collaboration field and a price-warranty tradeoff present versus absent, holding price and warranty symmetric when absent. Measure focal-selection rate, insufficient-information rate, and whether the X1-X0 contrast shrinks.",
+        "Test a mid-range competing-history ladder in which the alternative firm has zero, one, or three accepted prior projects while the focal firm is at X0 or X1. Measure focal, alternative, equivalent, and insufficient responses plus mirror agreement to locate non-saturated contrasts."
+      ],
+      "limitations": [
+        "Most executed contexts were boundary-saturated: with 10 calls per X condition, rates were often 0.0% or 100.0%, limiting discrimination and making small contrasts difficult to interpret.",
+        "The focal-selection rate alone groups both neutral categories with other non-focal responses; inspect the separate equivalent and insufficient-information counts to understand non-selection.",
+        "The design uses repeated and mirrored model calls on a narrow stated-choice proxy; it does not measure realized cooperation, contract execution, project completion, or project performance, and no supplied paper or human sample validates the patterns."
+      ]
+    },
+    "events": [],
+    "decisionsCompleted": 220,
+    "decisionsPlanned": 220
+  },
+  "roundOrigins": [
+    {
+      "round": 1,
+      "summary": "The baseline was descriptively saturated, so the selected contexts target different boundary questions rather than repeating routine procurement. r1-c1 varies formal audit and published scoring, while r1-c2 varies temporal urgency after an unplanned stoppage. Both keep the same decision task, X contrast, focal and alternative options, and feasibility conditions while providing independent information about whether the baseline ceiling is context-bound.",
+      "shortSummary": "The baseline produced an extreme split between neutral responses and choosing the familiar firm. This round explores whether formal auditing and published scoring, or urgency after an unplanned stoppage, could change that pattern while keeping the partner-selection task and both feasible options unchanged.",
+      "sourceContextIds": [
+        "baseline"
+      ]
+    },
+    {
+      "round": 2,
+      "summary": "Both prior rounds were saturated at X0 neutral and X1 focal selection. r2-c1 adds a competing alternative-firm collaboration record, which targets the X1 ceiling by making the alternative relationally attractive. r2-c4 adds a focal-firm proximity cue that is constant across X conditions, which targets the X0 floor by giving a reason to select the focal firm even with no prior project. They address different boundary questions while keeping the X contrast, actor, task, and both options feasible.",
+      "shortSummary": "Earlier simulations paired no prior history with neutral responses and prior success with focal-firm selection. This round adds either a competing collaboration record for the alternative firm or a proximity advantage for the focal firm, exploring different ways that other evidence might change the contrast.",
+      "sourceContextIds": [
+        "baseline",
+        "r1-c1",
+        "r1-c2"
+      ]
+    },
+    {
+      "round": 3,
+      "summary": "These two contexts cover different questions rather than repeating prior saturation tests. r3-c1 adds a current focal-firm commercial advantage that could move X0 off its neutral floor and compress the prior-history contrast. r3-c3 tests a formal evaluation instrument that omits prior collaboration, which could reduce X1 focal selection. Together they probe current-merit movement and procedural suppression while keeping the actor, task, options, and X contrast unchanged.",
+      "shortSummary": "To move beyond earlier extreme response patterns, this round examines two different sources of influence: a current commercial advantage for the focal firm and a formal evaluation instrument that omits collaboration history. The aim is to explore current merit and evaluation procedures without changing X or the decision task.",
+      "sourceContextIds": [
+        "baseline",
+        "r2-c4",
+        "r1-c1"
+      ]
+    },
+    {
+      "round": 4,
+      "summary": "Select r4-c1 to test a two-sided current commercial tradeoff common to both X levels, which can move choices away from the saturated neutral/focal pattern. Select r4-c4 to test technical relevance of prior collaboration, an unexecuted boundary that may reduce X1 reliance without adding a competing firm record. These cover different questions: current proposal tradeoffs versus domain match of prior success. The other candidates either repeat competing-record or formal-process cues with lower expected discrimination or vary contract form symmetrically.",
+      "shortSummary": "This round explores a commercial tradeoff between the current proposals and the technical relevance of earlier collaboration. These questions could reveal whether competing current advantages or a weaker match between past and present work changes the history contrast, while both partner options remain feasible.",
+      "sourceContextIds": [
+        "r3-c1",
+        "baseline",
+        "r3-c3"
+      ]
+    },
+    {
+      "round": 5,
+      "summary": "The set covers two distinct questions. r5-c2 tests competition from a single alternative-firm relationship, reducing the extreme three-project alternative from r2-c1. r5-c3 tests whether prior focal collaboration remains diagnostic when it comes from another business unit and site, extending the relevance manipulation in r4-c4. Both preserve the same X0/X1 contrast, keep both options feasible, and avoid exact duplicates of executed facts. Other candidates are retained as controls for symmetric references, formal review, site observation, and disclosure timing.",
+      "shortSummary": "One context reduces the alternative firm's competing history from three projects to one, building on an earlier comparison. The other asks whether successful focal collaboration remains informative when it occurred in another business unit and site, extending the previous question about the relevance of past experience.",
+      "sourceContextIds": [
+        "r2-c1",
+        "r4-c4",
+        "r3-c3"
+      ]
+    }
+  ]
+}

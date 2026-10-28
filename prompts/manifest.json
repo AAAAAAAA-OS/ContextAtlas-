@@ -1,0 +1,48 @@
+{
+  "description": "Exact system prompts and representative user JSON payloads captured from the shipped engine with the default five-round, two-context, twelve-per-condition settings. Payload values are offline fixtures, not research results. Dynamic plan/review instructions adapt to contextsPerRound.",
+  "engineSha256": "58f86454c94f5a19f21abec8827dcea2ffc0958cfa5881244f785b1c44148230",
+  "roles": [
+    {
+      "role": "extract",
+      "systemFile": "extract.system.txt",
+      "payloadExampleFile": "extract.payload.example.json",
+      "systemSha256": "e3a23bc21c41784453e8a1fd5f8f9c74f5a3a1ebbcab417b637015cfd866903e"
+    },
+    {
+      "role": "design",
+      "systemFile": "design.system.txt",
+      "payloadExampleFile": "design.payload.example.json",
+      "systemSha256": "dc3defc0c8db0e34352278561ce32d60fd790b49b309d67245af484f89dd8b49"
+    },
+    {
+      "role": "actor",
+      "systemFile": "actor.system.txt",
+      "payloadExampleFile": "actor.payload.example.json",
+      "systemSha256": "eebc76f70449db7bc09b66b5c79a7c6da6f0a1527df9252a335647a641ca32a1"
+    },
+    {
+      "role": "plan",
+      "systemFile": "plan.system.txt",
+      "payloadExampleFile": "plan.payload.example.json",
+      "systemSha256": "9b4962cc6be6b414f818e3c8d00d4c8464895a927a5619db4307645d1cf8acb0"
+    },
+    {
+      "role": "review",
+      "systemFile": "review.system.txt",
+      "payloadExampleFile": "review.payload.example.json",
+      "systemSha256": "fffc7592e3dc1769fc46b6da665522b59b277117488a72d092e209e341d7620b"
+    },
+    {
+      "role": "reflect",
+      "systemFile": "reflect.system.txt",
+      "payloadExampleFile": "reflect.payload.example.json",
+      "systemSha256": "0a860add63f10980d22c40ee38c53ba23a34133b9acaba1063412e4b4def6e7b"
+    },
+    {
+      "role": "report",
+      "systemFile": "report.system.txt",
+      "payloadExampleFile": "report.payload.example.json",
+      "systemSha256": "c58c3cc99cb128b25bf13a7868c2ffdfdc0567ed23aba8c257da70fca1c46a4a"
+    }
+  ]
+}
